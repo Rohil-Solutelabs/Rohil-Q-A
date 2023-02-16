@@ -10,13 +10,10 @@ for (let freq = 0; freq < arr.length; freq++) {
 
   // update frequency count of an element in frequency object
   if (frequency[element]) {
-    frequency[element] = frequency[element] + 1;
+    frequency[element]++;
   } else {
     frequency[element] = 1;
   }
 }
 
 console.log(frequency);
-
-
-
