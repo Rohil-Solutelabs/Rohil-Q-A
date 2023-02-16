@@ -2,7 +2,7 @@
 
 const arr = ["hello", "world", "java", "hello", "java"];
 function reduce_func(acc, current) {
-  if (typeof acc[current] == "string") {
+  if (typeof acc[current] == "undefined") {
     acc[current] = 1;
   } else {
     acc[current] = acc[current] + 1;
