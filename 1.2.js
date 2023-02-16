@@ -6,13 +6,13 @@ const arr = ["hello", "world", "java", "hello", "java"];
 const frequency = {};
 
 for (let freq = 0; freq < arr.length; freq++) {
-  let element = arr[freq];
+  let e = arr[freq];
 
   // update frequency count of an element in frequency object
-  if (frequency[element]) {
-    frequency[element]++;
+  if (frequency[e]) {
+    frequency[e]++;
   } else {
-    frequency[element] = 1;
+    frequency[e] = 1;
   }
 }
 
