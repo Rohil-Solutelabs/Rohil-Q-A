@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Await_async</title>
+  </head>
+  <body>
+    <script>
+      //   async function gajera() {
+      //     return 7;
+      //   }
+      //   gajera().then((x) => {
+      //     console.log(x);
+      //   });
+
+      //   ---------------------------------- Promises with await/async--------------------------------------------------------
+
+      async function rohil() {
+        let delhiweather = new Promise(function (resolve, reject) {
+          // console.log("promise is pending");
+          setTimeout(() => {
+            resolve("23 Deg");
+          }, 2000);
+        });
+
+        let suratweather = new Promise(function (resolve, reject) {
+          // console.log("promise is pending");
+          setTimeout(() => {
+            resolve("30 Deg");
+          }, 5000);
+        });
+
+        // delhiweather.then((value) => {
+        //   //   console.log(value);
+        //   alert(value);
+        // });
+
+        // suratweather.then((value) => {
+        //   //   console.log(value);
+        //   alert(value);
+        // });
+
+        console.log("Fetching Delhi Weather please Wait...");
+        let delhiW = await delhiweather;
+        console.log("Fetched Delhi Weather: " + delhiW);
+
+        console.log("Fetching Surat Weather please Wait...");
+        let suratW = await suratweather;
+        console.log("Fetched Surat Weather: " + suratW);
+
+        return [delhiW, suratW];
+      }
+      console.log("Welcome to weather control room!");
+      let a = rohil();
+
+      a.then((value) => {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
