@@ -1,3 +1,6 @@
+ // Program to check a string with balanced brackets:-
+
+
 function isBalanced(str) {
   const stack = [];
   const pairs = {
