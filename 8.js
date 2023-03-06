@@ -7,9 +7,9 @@ const dup_arr = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     if (!map[arr[i]]) {
-      map[arr[i]] = true;
       result.push(arr[i]);
     }
+    map[arr[i]] = true;
   }
   console.log(result);
 };
