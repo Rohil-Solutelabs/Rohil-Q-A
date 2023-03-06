@@ -3,16 +3,12 @@
 const arr = [1, 3, 5, 1, 4, 8, 2, 5, 6, 8, 8, 3, 2, 7];
 
 const dup_arr = (arr) => {
-  let sortedArray = arr.sort();
-
+  let map = {};
   let result = [];
-
-  for (let i = 0; i < sortedArray.length; i++) {
-    if (
-      sortedArray[i + 1] !== sortedArray[i] &&
-      sortedArray[i - 1] !== sortedArray[i]
-    ) {
-      result.push(sortedArray[i]);
+  for (let i = 0; i < arr.length; i++) {
+    if (!map[arr[i]]) {
+      map[arr[i]] = true;
+      result.push(arr[i]);
     }
   }
   console.log(result);
