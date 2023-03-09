@@ -22,7 +22,12 @@ function collectBooks(arr) {
   let booksArr = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].books.length; j++) {
-      booksArr.push(arr[i].books[j]);
+      // booksArr.push(arr[i].books[j]);
+
+      let book = arr[i].books[j];
+      if (!booksArr.includes(book)) {
+        booksArr.push(book);
+      }
     }
   }
   return booksArr;
